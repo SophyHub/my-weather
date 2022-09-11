@@ -1,0 +1,90 @@
+body {
+  font-family: "Roboto", sans-serif;
+  max-width: fit-content;
+  padding: 0px;
+  min-width: calc(100vw - 20px);
+  min-height: calc(100vh - 20px);
+  border: 2px solid #7c7c7c;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+i.currentsky {
+  color: #ff6584;
+  font-size: 50px;
+}
+
+.focus {
+  text-align: center;
+  position: fixed;
+  left: 1px;
+  line-height: 5px;
+  margin: 30px auto;
+  max-width: fit-content;
+  display: block;
+  text-decoration: none;
+  display: block;
+}
+
+.protrait {
+  right: 35px;
+  display: block;
+  margin: 30px auto;
+  width: 50%;
+  max-width: fit-content;
+  position: fixed;
+}
+
+.forecastcontainer {
+  position: fixed;
+  bottom: 5px;
+  max-width: fit-content;
+}
+
+p {
+  color: #ff6584;
+  text-align: center;
+}
+p.degree {
+  color: #6c63ff;
+  height: 19px;
+  margin-top: 1px;
+}
+.forecast {
+  text-align: center;
+}
+.degree {
+  color: #6c63ff;
+  font-size: 25px;
+  line-height: 1px;
+}
+.forecast.hover {
+  color: antiquewhite;
+}
+footer {
+  position: fixed;
+  bottom: 0px;
+  text-align: center;
+  display: block;
+}
+
+h6 {
+  color: #7c7c7c;
+}
+
+.search-more {
+  color: #6c63ff;
+  font-size: 25px;
+}
+.units {
+  color: #6c63ff;
+  font-size: 20px;
+  top: -14px;
+  position: relative;
+}
+.temperature {
+  font-style: italic;
+}
+.city {
+  font-size: xx-large;
+}
