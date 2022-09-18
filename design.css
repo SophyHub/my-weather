@@ -16,23 +16,20 @@ i.currentsky {
 
 .focus {
   text-align: center;
-  position: fixed;
   left: 1px;
   line-height: 5px;
   margin: 30px auto;
   max-width: fit-content;
-  display: block;
   text-decoration: none;
   display: block;
 }
 
 .protrait {
-  right: 35px;
+  right: 5px;
   display: block;
   margin: 30px auto;
   width: 50%;
   max-width: fit-content;
-  position: fixed;
 }
 
 .forecastcontainer {
@@ -58,9 +55,7 @@ p.degree {
   font-size: 25px;
   line-height: 1px;
 }
-.forecast.hover {
-  color: antiquewhite;
-}
+
 footer {
   position: fixed;
   bottom: 0px;
@@ -87,4 +82,7 @@ h6 {
 }
 .city {
   font-size: xx-large;
+}
+
+.container {
 }

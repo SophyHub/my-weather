@@ -27,101 +27,96 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="looking">
-        <form class="search-form" id="search-form">
-          <div class="row">
-            <div class="col-9">
-              <input
-                type="search"
-                placeholder="🌎Change City Here"
-                autofocus="on"
-                autocomplet="off"
-                id="city-input"
-                class="form-control shadow-sm"
-              />
-              <div class="col-3">
-                <input
-                  type="submit"
-                  value="Search"
-                  class="form-control btn btn-primary shadow-sm w-100"
-                  id="search-more"
-                />
-              </div>
-            </div>
+    <form id="search-form">
+      <div class="row">
+        <div class="col-9">
+          <input
+            type="search"
+            placeholder="🌎Change City Here"
+            class="form-control shadow-sm"
+            id="city-input"
+          />
+          <div class="col-3">
+            <input
+              type="submit"
+              class="form-control btn btn-primary shadow-sm w-200"
+              id="search-more"
+              value="Search"
+            />
           </div>
-        </form>
+      </div>
+      </div>
+    </form>
         <div class="weather-app">
           <div class="row">
             <div class="col-6">
-              <ul class="focus">
-                <i class="fa-solid fa-cloud-sun currentsky"></i>
-                <span class="degree"
-                  ><h1>
-                    <span class="temperature" id="temp">89</span>
-                    <span class="units">
-                      <a href="#" id="celsius-link">°C</a> "|"
-                      <a href="#" id="fehrenheit-link"> °F </a>
-                    </span>
-                  </h1></span
-                >
-                <h2 id="city">Elkins Park, is my home</h2>
-                <h3 id="date">YOU MUST ENTER A CITY FOR THE DATE...</h3>
-                <h5>
-                  <span id="description"> Lets See</span>, with a
-                  <span id="cloudCover"> 00%</span>% chance of cloud cover
-                </h5>
-                <h6>
-                  Sunset:
-                  <span id="sunset">timing needs to be rounded</span> Humidity:
-                  <span id="humidity"> will update with refresh </span>%
-                </h6>
-              </ul>
-              <div class="protrait">
-                <img src="images/sunnyday.png" width="375px" />
-              </div>
-            </div>
-          </div>
+      <ul class="focus">
+        <i class="fa-solid fa-cloud-sun currentsky"></i>
+        <span class="degree"
+          ><h1>
+            <span class="temperature" id="temp">89</span>
+            <span class="units">
+              <a href="#" id="celsius-link">°C</a> "|"
+              <a href="#" id="fehrenheit-link"> °F </a>
+            </span>
+          </h1></span
+        >
+        <h2 id="city">Elkins Park, is my home</h2>
+        <h3 id="date">YOU MUST ENTER A CITY FOR THE DATE...</h3>
+        <h5>
+          <span id="description"> Lets See</span>, with a
+          <span id="cloudCover"> 00%</span>% chance of cloud cover
+        </h5>
+        <h6>
+          Sunset:
+          <span id="sunset">timing needs to be rounded</span> Humidity:
+          <span id="humidity"> will update with refresh </span>%
+        </h6>
+      </ul>
+      </div>
+      <div class="col-6">
+      <span class="protrait">
+        <img src="images/sunnyday.png" width="350px" />
+      </span>
+    </div>
 
-          <div class="forecastcontainer">
-            <div class="row row-cols-6 forecast">
-              <div class="col">
-                Monday
-                <p>
-                  <i class="fa-solid fa-cloud-bolt"></i>
-                </p>
-                <p class="degree">81°/<strong> 78°</strong></p>
-              </div>
-              <div class="col">
-                Tuesday
-                <p><i class="fa-solid fa-cloud-sun-rain"></i></p>
-                <p class="degree">84°/<strong> 80°</strong></p>
-              </div>
-              <div class="col">
-                Wednesday
-                <p><i class="fa-solid fa-cloud-sun"></i></p>
-                <p class="degree">89°/<strong> 82°</strong></p>
-              </div>
-              <div class="col">
-                Thursday
-                <p><i class="fa-solid fa-smog"></i></p>
-                <p class="degree">91°/<strong> 85°</strong></p>
-              </div>
-              <div class="col">
-                Friday
-                <p><i class="fa-solid fa-temperature-arrow-up"></i></p>
-                <p class="degree">97°/<strong> 91°</strong></p>
-              </div>
-              <div class="col">
-                Saturday
-                <p><i class="fa-solid fa-sun"></i></p>
-                <p class="degree">90°/<strong> 84°</strong></p>
-              </div>
-            </div>
-          </div>
+    <div class="forecastcontainer">
+      <div class="row row-cols-6 forecast">
+        <div class="col">
+          Monday
+          <p>
+            <i class="fa-solid fa-cloud-bolt"></i>
+          </p>
+          <p class="degree">81°/<strong> 78°</strong></p>
+        </div>
+        <div class="col">
+          Tuesday
+          <p><i class="fa-solid fa-cloud-sun-rain"></i></p>
+          <p class="degree">84°/<strong> 80°</strong></p>
+        </div>
+        <div class="col">
+          Wednesday
+          <p><i class="fa-solid fa-cloud-sun"></i></p>
+          <p class="degree">89°/<strong> 82°</strong></p>
+        </div>
+        <div class="col">
+          Thursday
+          <p><i class="fa-solid fa-smog"></i></p>
+          <p class="degree">91°/<strong> 85°</strong></p>
+        </div>
+        <div class="col">
+          Friday
+          <p><i class="fa-solid fa-temperature-arrow-up"></i></p>
+          <p class="degree">97°/<strong> 91°</strong></p>
+        </div>
+        <div class="col">
+          Saturday
+          <p><i class="fa-solid fa-sun"></i></p>
+          <p class="degree">90°/<strong> 84°</strong></p>
         </div>
       </div>
     </div>
+
     <footer>
       Coded by Sophony Sime
       <a href="https://github.com/SophyHub/my-weather">GitHub Link</a>
