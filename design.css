@@ -1,12 +1,5 @@
 body {
   font-family: "Roboto", sans-serif;
-  max-width: fit-content;
-  padding: 0px;
-  min-width: calc(100vw - 20px);
-  min-height: calc(100vh - 20px);
-  border: 2px solid #7c7c7c;
-  margin: 10px;
-  border-radius: 10px;
 }
 
 i.currentsky {
@@ -18,24 +11,24 @@ i.currentsky {
   text-align: center;
   left: 1px;
   line-height: 5px;
-  margin: 30px auto;
+  margin: 15px auto;
   max-width: fit-content;
   text-decoration: none;
   display: block;
 }
 
 .protrait {
-  right: 5px;
+  right: 1px;
   display: block;
-  margin: 30px auto;
-  width: 50%;
+  margin: 10px auto;
+
   max-width: fit-content;
+  text-align: center;
+  position: inherit;
 }
 
 .forecastcontainer {
-  position: fixed;
   bottom: 5px;
-  max-width: fit-content;
 }
 
 p {
@@ -83,6 +76,10 @@ h6 {
 .city {
   font-size: xx-large;
 }
-
-.container {
+.weather-app {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 2px solid #ff6584;
+  border-radius: 11px;
 }
