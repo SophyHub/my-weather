@@ -77,7 +77,9 @@ function showTemperture(response) {
   let sunset = document.querySelector("sunset");
   let description = document.querySelector("description");
   let clouds = document.querySelector("cloudCover");
+  let iconElement = document.querySelector("#icon");
   let temperature = Math.round(response.data.main.temp);
+
   h1.innerHTML = `Currently ${temperature}° F in your City`;
   h2.innerHTML = `${response.data.name}🗺️📍`;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
@@ -85,6 +87,11 @@ function showTemperture(response) {
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
   document.querySelector("#cloudCover").innerHTML = response.data.clouds.all;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].main);
 }
 function retrievePosition(position) {
   let apiKey = "1c11d2f653de96f3ffba668f7268667a";
