@@ -1,6 +1,5 @@
 body {
   font-family: "Roboto", sans-serif;
-
 }
 
 i.currentsky {
@@ -55,7 +54,7 @@ footer {
   bottom: 0px;
   text-align: center;
   display: block;
-  
+  color: #ff6584;
 }
 
 h6 {
@@ -73,10 +72,11 @@ h6 {
 }
 .button:hover {
   cursor: pointer;
-opacity: 2;
-transition: all 1s ease-in-out;
-color:#ec6e4c}
+  opacity: 2;
+  transition: all 1s ease-in-out;
+  color: #ec6e4c;
 }
+
 .units {
   color: #6c63ff;
   font-size: 20px;
@@ -102,5 +102,6 @@ color:#ec6e4c}
   color: #ff6584;
 }
 
-
-.footer:find-me {color:#FF6584;}
+.footer:find-me {
+  color: #ff6584;
+}

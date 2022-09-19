@@ -79,11 +79,14 @@ function showTemperture(response) {
   let clouds = document.querySelector("cloudCover");
   let iconElement = document.querySelector("#icon");
   let temperature = Math.round(response.data.main.temp);
-
+  const sunsetDayTime = new Date(response.data.sys.sunset * 1000);
+  const sunsetTime =
+    sunsetDayTime.getHours() + ":" + sunsetDayTime.getMinutes();
+  document.querySelector("#sunset").innerHTML = sunsetTime;
   h1.innerHTML = `Currently ${temperature}° F in your City`;
-  h2.innerHTML = `${response.data.name}🗺️📍`;
+  h2.innerHTML = `${response.data.name}🗺️`;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#sunset").innerHTML = response.data.sys.sunset;
+  // document.querySelector("#sunset").innerHTML = response.data.sys.sunset;
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
   document.querySelector("#cloudCover").innerHTML = response.data.clouds.all;
