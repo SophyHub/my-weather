@@ -1,5 +1,6 @@
 body {
   font-family: "Roboto", sans-serif;
+
 }
 
 i.currentsky {
@@ -25,6 +26,7 @@ i.currentsky {
   max-width: fit-content;
   text-align: center;
   position: inherit;
+  padding: 25px;
 }
 
 .forecastcontainer {
@@ -32,11 +34,11 @@ i.currentsky {
 }
 
 p {
-  color: #ff6584;
+  color: #ec6e4c;
   text-align: center;
 }
 p.degree {
-  color: #6c63ff;
+  color: #4ea685;
   height: 19px;
   margin-top: 1px;
 }
@@ -44,7 +46,7 @@ p.degree {
   text-align: center;
 }
 .degree {
-  color: #6c63ff;
+  color: #4ea685;
   font-size: 25px;
   line-height: 1px;
 }
@@ -53,15 +55,27 @@ footer {
   bottom: 0px;
   text-align: center;
   display: block;
+  
 }
 
 h6 {
   color: #7c7c7c;
 }
 
-.search-more {
-  color: #6c63ff;
-  font-size: 25px;
+.button {
+  color: #4ea685;
+  font-size: 21px;
+  font-weight: bolder;
+  width: 200px;
+  box-shadow: 5px 3px 3px rgb(0 0 0 / 20%);
+  font-family: "Roboto", sans-serif;
+  border-radius: 3px;
+}
+.button:hover {
+  cursor: pointer;
+opacity: 2;
+transition: all 1s ease-in-out;
+color:#ec6e4c}
 }
 .units {
   color: #6c63ff;
@@ -87,3 +101,6 @@ h6 {
 .icon {
   color: #ff6584;
 }
+
+
+.footer:find-me {color:#FF6584;}
