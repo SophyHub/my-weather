@@ -43,6 +43,30 @@ let dateElement = document.querySelector("#date");
 let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let day = ["Thu", "Fri", "Sat", "Sun"];
+  day.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+        <div class="nextDay">${day}</div>
+            <img src="http://openweathermap.org/img/wn/50d@2x.png"
+          alt=""
+          width="42"/>
+          <div class= "tempHighLow"> 
+          <span class= "max">98°</span>|
+          <span class= "low">78°</span> 
+          </div>
+      </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
+}
+
 function showCity(event) {
   event.preventDefault();
   let newCity = document.querySelector("h2");
@@ -106,5 +130,3 @@ function retrievePosition(position) {
 
 navigator.geolocation.getCurrentPosition(retrievePosition);
 searchCity.addEventListener("submit", showCity, showTemperture);
-
-// https://codesandbox.io/s/runtime-butterfly-6z5n8i
