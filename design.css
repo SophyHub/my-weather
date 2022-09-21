@@ -6,7 +6,9 @@ i.currentsky {
   color: #ff6584;
   font-size: 50px;
 }
-
+.degree {
+  color: #4ea685;
+}
 .focus {
   text-align: center;
   left: 1px;
