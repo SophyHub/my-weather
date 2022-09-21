@@ -28,26 +28,33 @@ i.currentsky {
   padding: 25px;
 }
 
-.forecastcontainer {
+.weather-forecast {
   bottom: 5px;
+  margin-top: 25px;
 }
 
-p {
-  color: #ec6e4c;
+.foreSky {
   text-align: center;
 }
-p.degree {
+.foreSky:forecast {
   color: #4ea685;
-  height: 19px;
+  height: 10px;
   margin-top: 1px;
 }
 .forecast {
   text-align: center;
 }
-.degree {
+.tempHighLow {
   color: #4ea685;
   font-size: 25px;
   line-height: 1px;
+}
+
+.max {
+  font-weight: bold;
+}
+.low {
+  opacity: 0.5px;
 }
 
 footer {
