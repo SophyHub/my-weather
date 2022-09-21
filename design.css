@@ -31,6 +31,7 @@ i.currentsky {
 .weather-forecast {
   bottom: 5px;
   margin-top: 25px;
+  text-align: center;
 }
 
 .foreSky {
@@ -47,7 +48,7 @@ i.currentsky {
 .tempHighLow {
   color: #4ea685;
   font-size: 25px;
-  line-height: 1px;
+  line-height: 15px;
 }
 
 .max {

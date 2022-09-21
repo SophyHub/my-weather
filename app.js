@@ -46,7 +46,7 @@ dateElement.innerHTML = formatDate(currentTime);
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
-  let day = ["Thu", "Fri", "Sat", "Sun"];
+  let day = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
   day.forEach(function (day) {
     forecastHTML =
       forecastHTML +
@@ -119,6 +119,7 @@ function showTemperture(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].main);
+  displayForecast(response.data.coord);
 }
 function retrievePosition(position) {
   let apiKey = "1c11d2f653de96f3ffba668f7268667a";
