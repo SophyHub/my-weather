@@ -97,11 +97,11 @@ function showCity(event) {
   let cityInput = document.querySelector("#city-input");
   newCity.innerHTML = `uh-oh 🤭,try search again📍${cityInput.value}`;
   var city = document.querySelector("#city-input").value;
-  var apiKey = "57821c3b75b60c68ecd1a8d0dd1aa8d3";
+  var apiKey = "ad793a6d772939c31783de5822791acf";
   var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q="
     .concat(city, "&appid=")
     .concat(apiKey, "&units=imperial");
-  axios.get(apiUrl).then(showTemperture);
+  axios.get(apiUrl).then(showTemperture).then(displayForecast);
 }
 function handleSubmit(event) {
   event.preventDefault();
@@ -112,11 +112,11 @@ searchCity.addEventListener("submit", handleSubmit);
 
 function search(event) {
   event.preventDefault();
-  let apiKey = "57821c3b75b60c68ecd1a8d0dd1aa8d3";
+  let apiKey = "ad793a6d772939c31783de5822791acf";
   let city = document.querySelector("#city-input").value;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
-  axios.get(apiUrl).then(showTemperture);
-  displayForecast(response.data.coord);
+  axios.get(apiUrl).then(showTemperture).then(displayForecast);
+  getForecast(response.data.coord);
 }
 
 function showTemperture(response) {
@@ -144,15 +144,20 @@ function showTemperture(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].main);
-  displayForecast(response.data.coord);
+  getForecast(response.data.coord);
 }
 function retrievePosition(position) {
-  let apiKey = "57821c3b75b60c68ecd1a8d0dd1aa8d3";
+  let apiKey = "ad793a6d772939c31783de5822791acf";
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${apiKey}`;
-  axios.get(apiUrl).then(showTemperture);
+  axios.get(apiUrl).then(showTemperture).then(displayForecast);
 }
 
 navigator.geolocation.getCurrentPosition(retrievePosition);
-searchCity.addEventListener("submit", showCity, showTemperture);
+searchCity.addEventListener(
+  "submit",
+  showCity,
+  showTemperture,
+  displayForecast
+);
