@@ -46,6 +46,7 @@ dateElement.innerHTML = formatDate(currentTime);
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
+
   let days = [
     "Sunday",
     "Monday",
@@ -62,7 +63,7 @@ function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
-  day.forEach(function (forecastDay, index) {
+  forecast.forEach(function (forecastDay, index) {
     if (index < 6) {
       forecastHTML =
         forecastHTML +
@@ -74,8 +75,8 @@ function displayForecast(response) {
           alt=""
           width="42"/>
           <div class= "tempHighLow"> 
-          <span class= "max">${Math.round(forecastDay.temp.max)}°</span>|
-          <span class= "low">${Math.round(forecastDay.temp.min)}°</span> 
+          <span class= "tempMax"> ${Math.round(forecastDay.temp.max)}°</span>|
+          <span class= "tempLow"> ${Math.round(forecastDay.temp.min)}°</span> 
           </div>
       </div>`;
     }
@@ -85,7 +86,6 @@ function displayForecast(response) {
   forecastElement.innerHTML = forecastHTML;
 }
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKey = "ad793a6d772939c31783de5822791acf";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(displayForecast);
@@ -151,7 +151,7 @@ function retrievePosition(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${apiKey}`;
-  axios.get(apiUrl).then(showTemperture).then(displayForecast);
+  axios.get(apiUrl).then(showTemperture);
 }
 
 navigator.geolocation.getCurrentPosition(retrievePosition);

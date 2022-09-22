@@ -53,10 +53,10 @@ i.currentsky {
   line-height: 15px;
 }
 
-.max {
+.tempMax {
   font-weight: bold;
 }
-.low {
+.tempLow {
   opacity: 0.5px;
 }
 
